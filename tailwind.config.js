@@ -6,6 +6,16 @@ module.exports = {
   theme: {
     extend: {},
   },
+  variants: {},
   plugins: [],
+  corePlugins: {
+    // Extend the default theme to include a global style
+    preflight: (preflight) => ({
+      ...preflight,
+      '*': {
+        margin: 0,
+      },
+    }),
+ },
 }
 
